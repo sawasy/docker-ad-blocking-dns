@@ -32,10 +32,10 @@ RUN echo "include \"/etc/bind/blacklist\";" >> /etc/bind/named.conf
 ADD null.zone.file /etc/bind/null.zone.file
 
 #Copy the supervisord config
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD supervisord.conf /etc/supervisor/conf.d/bind9.conf
 
 #Open up the port
 EXPOSE 53
 
 #Start things off!
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord","-c","/etc/supervisor/supervisord.conf"]
