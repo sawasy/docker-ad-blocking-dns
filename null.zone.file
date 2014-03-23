@@ -1,0 +1,15 @@
+$TTL    86400   ; one day
+ 
+@       IN      SOA     ns.localhost. admin.localhost. (
+            2002061000       ; serial number
+            28800   ; refresh  8 hours
+            7200    ; retry    2 hours
+            864000  ; expire  10 days
+            86400 ) ; min ttl  1 day
+ 
+        NS      ns.localhost
+ 
+        A       127.0.0.1 ; Any webserver you like or none.
+ 
+@               IN      A       127.0.0.1 ; Localhost
+*               IN      A       127.0.0.1 ; This could be a webserver too.
