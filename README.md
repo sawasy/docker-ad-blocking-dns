@@ -7,7 +7,7 @@ cd docker-ad-blocking-dns
 sudo docker build -t sawasy/docker-ad-blocking-dns
 sudo docker run -i -t -p 53:53 sawasy/docker-ad-blocking-dns
 ```
-
+###Notes
 You can tweak a few things. If you swap the 127.0.0.1 reference, in null.zone.file, for a real webserver you can track the 404s there. 
 
 Also, you might want to disable 
@@ -27,7 +27,7 @@ If you are doing this on an Ubuntu workstation, you likely will need to disable 
 ```shell
 sudo sed -i -e 's/dns=dnsmasq/#dns=dnsmasq/g' /etc/NetworkManager/NetworkManager.conf
 ```
-
+###Reference
 Most of the heavy lifting for this was sorted out here: http://www.lituxx.com/website/en/2014/03/block-ads-on-your-entire-network/
 
 Also, this uses the excellent Advertiser black list at http://pgl.yoyo.org/as/
