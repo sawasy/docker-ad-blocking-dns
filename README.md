@@ -5,7 +5,7 @@ docker-ad-blocking-dns
 ```shell
 cd docker-ad-blocking-dns
 sudo docker build -t sawasy/docker-ad-blocking-dns
-sudo docker run -i -t -p 53:53 sawasy/docker-ad-blocking-dns
+sudo docker run -d -p 53:53 sawasy/docker-ad-blocking-dns
 ```
 ###Notes
 You can tweak a few things. If you swap the 127.0.0.1 reference, in null.zone.file, for a real webserver you can track the 404s there. 
