@@ -4,7 +4,7 @@ docker-ad-blocking-dns
 
 ```shell
 cd docker-ad-blocking-dns
-sudo docker build -t sawasy/docker-ad-blocking-dns
+sudo docker build -t sawasy/docker-ad-blocking-dns .
 sudo docker run -d -p 53:53 -p 53:53/udp sawasy/docker-ad-blocking-dns
 ```
 ###Notes
@@ -26,6 +26,8 @@ will likely do the trick.
 If you are doing this on an Ubuntu workstation, you likely will need to disable dnsmasq.
 ```shell
 sudo sed -i -e 's/dns=dnsmasq/#dns=dnsmasq/g' /etc/NetworkManager/NetworkManager.conf
+sudo service network-manager restart
+sudo pkill dnsmasq
 ```
 ###Reference
 Most of the heavy lifting for this was sorted out here: http://www.lituxx.com/website/en/2014/03/block-ads-on-your-entire-network/

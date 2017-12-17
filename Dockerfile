@@ -1,7 +1,7 @@
 #
 # I don't use this, but fill your boots!
 
-FROM ubuntu:13.10
+FROM ubuntu:16.04
 MAINTAINER Matt Sawasy, sawasy@gmail.com
 
 # Update repos!
